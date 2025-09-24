@@ -352,11 +352,12 @@ section {
     color: white;
 }
 
+/* Add some responsive adjustments for the grid if needed */
 .countries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
 .country-card {
@@ -368,11 +369,29 @@ section {
     font-weight: 500;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer; /* Indicate that it's clickable */
 }
-
-.country-card:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-3px);
+.country-image-display img {
+    max-width: 100%; /* Ensure image fits within the container */
+    max-height: 300px; /* Adjust height as needed */
+    height: auto;
+    object-fit: contain; /* Scales the image while maintaining aspect ratio */
+}
+.country-image-display {
+    margin-top: 30px; /* Space above the image */
+    text-align: center; /* Center the image */
+    min-height: 200px; /* Reserve some space even when empty */
+    border: 1px solid #ccc; /* Optional: add a border */
+    background-color: #f9f9f9; /* Optional: background */
+    display: flex; /* Use flexbox to center the image if it's the only content */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure image doesn't overflow its container */
+}
+.country-card:hover, .country-card.active { /* Style on hover and when active */
+    background-color: #e0f7fa; /* Light blue highlight */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .travel-quote {
