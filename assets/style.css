@@ -382,7 +382,7 @@ section {
     text-align: center; /* Center the image */
     min-height: 200px; /* Reserve some space even when empty */
     border: 1px solid #ccc; /* Optional: add a border */
-    background-color: #f9f9f9; /* Optional: background */
+    background-color: transparent; /* Optional: background */
     display: flex; /* Use flexbox to center the image if it's the only content */
     justify-content: center;
     align-items: center;
